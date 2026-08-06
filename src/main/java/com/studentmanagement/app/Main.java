@@ -3,6 +3,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner; 
+
 import com.studentmanagement.model.Student;
 import com.studentmanagement.service.StudentService;
 
@@ -23,10 +24,10 @@ public class Main{
                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");   //
 
                System.out.print("Enter student name: ");
-               String abc ; 
-               if(abc == "a"){
+            //    String abc ; 
+            //    if(abc == "a"){
 
-               }
+            //    }
                student.setName(sc.nextLine());
 
                System.out.print("Enter age: ");

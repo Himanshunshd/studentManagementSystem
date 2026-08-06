@@ -1,0 +1,5 @@
+com\studentmanagement\model\Student.class
+com\studentmanagement\app\Main.class
+com\studentmanagement\service\StudentService.class
+com\studentmanagement\config\DatabaseConnection.class
+com\studentmanagement\dao\StudentDao.class
