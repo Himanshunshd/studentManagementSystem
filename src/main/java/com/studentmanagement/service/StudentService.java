@@ -7,21 +7,23 @@ import com.studentmanagement.model.Student;
 
 public class StudentService {
 
-      private StudentDao daoObject = new StudentDao();      //Make the DAO object private because other classes should not access it directly.
+      final private StudentDao daoObject = new StudentDao();      //Make the DAO object private because other classes should not access it directly.
 
-                  public boolean addStudent(Student addingStudent){      
-                         return daoObject.addStudent(addingStudent);            
+                  public boolean addStudent(Student addingStudent){       //1-> Main.java ka same reference addingStuent me store kara and Dao ko send kara 
+                         return daoObject.addStudent(addingStudent);      // and reference variable(addingStudent=student) same bhi teeno ko de salte hai.      
                   }  
-                  
-                  public List<Student> getAllStudents() {       
-                        return daoObject.getAllStudents();
-                 } 
-                 
-                 public void updateStudent(Student updatingStudent){      //updateStudent --- Function name, updatingStudent --- parameter.
-                         daoObject.updateStudent(updatingStudent);            
+                   
+                  public List<Student> getAllStudents() {     
+                         return daoObject.getAllStudents();
                   }
-
-                  public void deleteStudent(int id) {
-                         daoObject.deleteStudent(id);
-}
+                 
+                  public boolean updateStudent(Student updatingStudent){    
+                         return daoObject.updateStudent(updatingStudent);            
+                  }
+                  public boolean studentExists(int id) {
+                         return daoObject.studentExists(id);
+                  }
+                  public void deleteStudent(Student deletingStudent) {
+                         daoObject.deleteStudent(deletingStudent);
+                  }
 }
